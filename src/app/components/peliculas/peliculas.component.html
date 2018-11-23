@@ -1,0 +1,42 @@
+<div class="jumbotron jumbotron-fluid">
+    <div class="container">
+        <h1 class="display-3">PeliculasAPP</h1>
+        <p class="lead">Esta es una aplicación de películas</p>
+    </div>
+</div>
+
+<div class="container">
+    <div class="row">
+
+        <div class="col-sm-6">
+
+
+            <div class="row puntero">
+                <h1>{{ titulo_populares }}</h1>
+                <div [routerLink]="['/informacion', posterPopulares[0].id, 'buscarPeli' ]" class="col-md-12 div-pic-1" [ngStyle]="{ 'background-image': 'url( ' + (  posterPopulares[0]  | imagenPipe) + ' )' }">
+                </div>
+            </div>
+
+            <div class="row puntero">
+                <div [routerLink]="['/informacion', posterPopulares[1].id, 'buscarPeli' ]" class="col-sm-6 div-pic-2" [ngStyle]="{ 'background-image': 'url( ' + (  posterPopulares[1]  | imagenPipe) + ' )' }">
+                </div>
+                <div [routerLink]="['/informacion', posterPopulares[2].id, 'buscarPeli' ]" class="col-sm-6 div-pic-2" [ngStyle]="{ 'background-image': 'url( ' + (  posterPopulares[2]  | imagenPipe) + ' )' }"></div>
+            </div>
+
+
+            <div class="row puntero">
+                <h1>{{ tituloActual }}</h1>
+                <div [routerLink]="['/informacion', posterActual[3].id, 'buscarPeli' ]" class="col-md-12 div-pic-1" [ngStyle]="{ 'background-image': 'url( ' + (  posterActual[3]  | imagenPipe) + ' )' }">
+                </div>
+            </div>
+
+            <div class="row puntero">
+                <div [routerLink]="['/informacion', posterActual[6].id, 'buscarPeli' ]" class="col-sm-6 div-pic-2" [ngStyle]="{ 'background-image': 'url( ' + (  posterActual[6]  | imagenPipe) + ' )' }"></div>
+                <div [routerLink]="['/informacion', posterActual[9].id, 'buscarPeli' ]" class="col-sm-6 div-pic-2" [ngStyle]="{ 'background-image': 'url( ' + (  posterActual[9]  | imagenPipe) + ' )' }"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
